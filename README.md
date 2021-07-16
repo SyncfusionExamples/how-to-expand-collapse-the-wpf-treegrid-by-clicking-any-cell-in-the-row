@@ -1,10 +1,10 @@
 # How to expand/collapse the WPF TreeGrid (SfTreeGrid) by clicking any cell in the row?
 
-How to expand/collapse the WPF TreeGrid (SfTreeGrid) by clicking any cell in the row?
+How to expand or collapse the WPF TreeGrid (SfTreeGrid) by clicking any cell in the row?
 
 # About the sample
 
-In SfTreeGrid, you can expand or collapse the groups by click any cell in caption summary row by overriding ProcessOnTapped mathod in TreeGridRowSelectionConverter.
+You can expand or collapse the groups by click any cell in caption summary row by overriding [ProcessOnTapped](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridRowSelectionController.html#Syncfusion_UI_Xaml_TreeGrid_TreeGridRowSelectionController_ProcessOnTapped_System_Windows_Input_MouseButtonEventArgs_Syncfusion_UI_Xaml_ScrollAxis_RowColumnIndex_) method in [TreeGridRowSelectionController](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridRowSelectionController.html) of [WPF TreeGrid](https://www.syncfusion.com/wpf-controls/treegrid) (SfTreeGrid).
 
 ```c#
 this.treeGrid.SelectionController = new TreeGridSelectionControllerExt(this.treeGrid);

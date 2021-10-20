@@ -31,5 +31,8 @@ public class TreeGridSelectionControllerExt : TreeGridRowSelectionController
     }
 }
 ```
+
+KB article - [How to expand/collapse the WPF TreeGrid (SfTreeGrid) by clicking any cell in the row?](https://www.syncfusion.com/kb/12025/how-to-expand-or-collapse-the-wpf-treegrid-sftreegrid-by-clicking-any-cell-in-the-row)
+
 ## Requirements to run the demo
  Visual Studio 2015 and above versions

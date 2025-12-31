@@ -1,10 +1,8 @@
-# How to expand/collapse the WPF TreeGrid (SfTreeGrid) by clicking any cell in the row?
+# How to Expand or Collapse the WPF TreeGrid by Clicking Any Cell in the Row?
 
-How to expand or collapse the WPF TreeGrid (SfTreeGrid) by clicking any cell in the row?
+This sample illustrate about how to expand or collapse the [WPF TreeGrid](https://www.syncfusion.com/wpf-controls/treegrid) (SfTreeGrid) by clicking any cell in the row.
 
-# About the sample
-
-You can expand or collapse the groups by click any cell in caption summary row by overriding [ProcessOnTapped](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridRowSelectionController.html#Syncfusion_UI_Xaml_TreeGrid_TreeGridRowSelectionController_ProcessOnTapped_System_Windows_Input_MouseButtonEventArgs_Syncfusion_UI_Xaml_ScrollAxis_RowColumnIndex_) method in [TreeGridRowSelectionController](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridRowSelectionController.html) of [WPF TreeGrid](https://www.syncfusion.com/wpf-controls/treegrid) (SfTreeGrid).
+You can expand or collapse the groups by click any cell in caption summary row by overriding [ProcessOnTapped](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridRowSelectionController.html#Syncfusion_UI_Xaml_TreeGrid_TreeGridRowSelectionController_ProcessOnTapped_System_Windows_Input_MouseButtonEventArgs_Syncfusion_UI_Xaml_ScrollAxis_RowColumnIndex_) method in [TreeGridRowSelectionController](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridRowSelectionController.html) of `TreeGrid`.
 
 ```c#
 this.treeGrid.SelectionController = new TreeGridSelectionControllerExt(this.treeGrid);
@@ -14,6 +12,7 @@ public class TreeGridSelectionControllerExt : TreeGridRowSelectionController
     public TreeGridSelectionControllerExt(SfTreeGrid treeGrid) : base(treeGrid)
     {
     }
+
     protected override void ProcessOnTapped(MouseButtonEventArgs e, RowColumnIndex currentRowColumnIndex)
     {
         if (currentRowColumnIndex.RowIndex <= this.TreeGrid.GetHeaderIndex())
@@ -32,7 +31,4 @@ public class TreeGridSelectionControllerExt : TreeGridRowSelectionController
 }
 ```
 
-KB article - [How to expand/collapse the WPF TreeGrid (SfTreeGrid) by clicking any cell in the row?](https://www.syncfusion.com/kb/12025/how-to-expand-or-collapse-the-wpf-treegrid-sftreegrid-by-clicking-any-cell-in-the-row)
-
-## Requirements to run the demo
- Visual Studio 2015 and above versions
+![TreeGrid with expand and collapse by clicking on the any cells](ExpandOrCollapseUsingCell.gif)
